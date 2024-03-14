@@ -20,7 +20,7 @@ export const hashPassword = (password) => {
 };
 
 
-const pool = new Pool({
+export const pool = new Pool({
   user: 'postgres',
   host: 'intellx.in',
   database: 'intelliCTS',
@@ -29,7 +29,7 @@ const pool = new Pool({
 });
 
 // Function to handle database errors
-const handleDBError = (err, res) => {
+export const handleDBError = (err, res) => {
   console.error('Database error:', err);
   res.status(500).json({ error: 'Something went wrong with the database' });
 };

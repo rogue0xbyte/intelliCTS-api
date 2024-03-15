@@ -139,6 +139,7 @@ The check clearance system takes you through the following process
 
 ## File Structure
 
+```
 Node-Code
 │
 ├── controllers
@@ -162,6 +163,7 @@ Node-Code
 ├── package.json
 ├── postgresql-dump-intelliCTS.sql
 └── swagger.json
+```
 
 ## Screenshots
 <img src='https://i.imgur.com/htWkoyy.jpeg'>

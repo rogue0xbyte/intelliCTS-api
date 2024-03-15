@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "0b1f4e2d-6c75-4173-8094-ce506a0736f8",
+		"name": "intelliCTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19439529"
+	},
+	"item": [
+		{
+			"name": "User: Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"organization_type\": \"clearing_house\",\r\n    \"password\": \"SBICorp\",\r\n    \"email\": \"top@sbi.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/create",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"myCorp@icici.com\",\r\n    \"userId\": \"5\",\r\n    \"password\": \"SBICorp\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/update",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Read",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/get",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/delete",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Log-In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"SBICorp\",\r\n    \"email\": \"top@sbi.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Log-Out",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImlhdCI6MTcxMDQyNDc1MCwiZXhwIjoxNzEwNDI4MzUwfQ.TFWB70edAbHtabzuvelCuuqJX7sQVaAvQNuSejgNv0o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cheque: Add Cheques",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImlhdCI6MTcxMDQ1ODM0MSwiZXhwIjoxNzEwNDYxOTQxfQ.17n0OazICTlqSUJe1lofwKH1oK4kLdkHJnumvh5PBLg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cheques\": [\r\n    {\r\n      \"micr\": \"110002002\",\r\n      \"bank_name\": \"National Bank of India\",\r\n      \"bank_branch\": \"Mumbai Main Branch\",\r\n      \"ifsc\": \"NBIN0000001\",\r\n      \"credit_to\": \"Government of India - Ministry of Finance\",\r\n      \"signature_image\": \"https://nationalbankofindia.com/signatures/nbi_signature.png\",\r\n      \"cheque_no\": \"123456\",\r\n      \"rbi_ac_no\": \"001234\",\r\n      \"txn_code\": \"123\",\r\n      \"ddmmyyyy\": \"14-03-2024\"\r\n    },\r\n    {\r\n      \"micr\": \"220003003\",\r\n      \"bank_name\": \"Central Bank of Kuwait (India)\",\r\n      \"bank_branch\": \"Delhi Main Branch\",\r\n      \"ifsc\": \"CBKI0000001\",\r\n      \"credit_to\": \"ABC Corporation\",\r\n      \"signature_image\": \"https://centralbankofkuwait.com/signatures/cbki_signature.png\",\r\n      \"cheque_no\": \"789012\",\r\n      \"rbi_ac_no\": \"005678\",\r\n      \"txn_code\": \"456\",\r\n      \"ddmmyyyy\": \"15-03-2024\"\r\n    },\r\n    {\r\n      \"micr\": \"330004004\",\r\n      \"bank_name\": \"Indian Bank of India\",\r\n      \"bank_branch\": \"Chennai Main Branch\",\r\n      \"ifsc\": \"IBIN0000001\",\r\n      \"credit_to\": \"XYZ Corporation\",\r\n      \"signature_image\": \"https://indianbankofindia.com/signatures/ibi_signature.png\",\r\n      \"cheque_no\": \"345678\",\r\n      \"rbi_ac_no\": \"009876\",\r\n      \"txn_code\": \"789\",\r\n      \"ddmmyyyy\": \"16-03-2024\"\r\n    },\r\n    {\r\n      \"micr\": \"440005005\",\r\n      \"bank_name\": \"State Bank of America (India)\",\r\n      \"bank_branch\": \"Bangalore Main Branch\",\r\n      \"ifsc\": \"SBAM0000001\",\r\n      \"credit_to\": \"DEF Corporation\",\r\n      \"signature_image\": \"https://statebankofamerica.com/signatures/sbam_signature.png\",\r\n      \"cheque_no\": \"901234\",\r\n      \"rbi_ac_no\": \"012345\",\r\n      \"txn_code\": \"1011\",\r\n      \"ddmmyyyy\": \"17-03-2024\"\r\n    },\r\n    {\r\n      \"micr\": \"550006006\",\r\n      \"bank_name\": \"United Bank of India\",\r\n      \"bank_branch\": \"Kolkata Main Branch\",\r\n      \"ifsc\": \"UBIN0000001\",\r\n      \"credit_to\": \"GHI Corporation\",\r\n      \"signature_image\": \"https://unitedbankofindia.com/signatures/ubi_signature.png\",\r\n      \"cheque_no\": \"567890\",\r\n      \"rbi_ac_no\": \"015678\",\r\n      \"txn_code\": \"1213\",\r\n      \"ddmmyyyy\": \"18-03-2024\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/cheque/upload-cheques",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"cheque",
+						"upload-cheques"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cheque: Cheque Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImlhdCI6MTcxMDQ3OTQ1NiwiZXhwIjoxNzEwNDgzMDU2fQ.fD1ZD5aSKXyhNxEg1x_uyHYPyjteKZM1eYbx39ms04s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"micr\": \"330004004\",\r\n    \"ifsc\": \"IBIN0000001\",\r\n    \"cheque_no\": \"345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/cheque/cheque-status",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"cheque",
+						"cheque-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cheque: Update Cheque Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImlhdCI6MTcxMDQ1ODM0MSwiZXhwIjoxNzEwNDYxOTQxfQ.17n0OazICTlqSUJe1lofwKH1oK4kLdkHJnumvh5PBLg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"micr\": \"330004004\",\r\n    \"ifsc\": \"IBIN0000001\",\r\n    \"cheque_no\": \"345678\",\r\n    \"status\": \"approved\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/cheque/update-cheque-status",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"cheque",
+						"update-cheque-status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

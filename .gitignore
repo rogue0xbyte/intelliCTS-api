@@ -18,6 +18,6 @@
 /back-end/yarn-debug.log*
 /back-end/yarn-error.log*
 
-/back-end/npm-debug.log*
-/back-end/yarn-debug.log*
-/back-end/yarn-error.log*
+/front-end/npm-debug.log*
+/front-end/yarn-debug.log*
+/front-end/yarn-error.log*

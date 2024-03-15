@@ -2,7 +2,7 @@
 import jwt from 'jsonwebtoken';
 import { hashPassword, handleDBError, pool } from './userController.js'; // Import hashPassword
 
-const secret = 'your_secret_key'; // Replace with a strong secret key
+export const secret = 'your_secret_key'; // Replace with a strong secret key
 
 export const login = async (req, res) => {
   const { email, password } = req.body;

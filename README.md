@@ -99,15 +99,6 @@ The check clearance system takes you through the following process
 - Component Rendering: Renders respective components based on URL paths specified in the routes, providing dynamic content display.
 - Styling Integration: Applies styles to the application using the provided styles.css file, ensuring a consistent and visually appealing UI.
 
-## Contributing
-
-If you'd like to contribute to IntelliCTS, please follow these guidelines:
-- Fork the repository on GitHub.
-- Create a new branch for your feature or bug fix.
-- Make changes and commit them with clear and descriptive messages.
-- Push your changes to your fork.
-- Submit a pull request to the main repository's master branch.
-
 <img src="https://i.imgur.com/ov0rdKZ.jpeg">
 <img src="https://i.imgur.com/wJ4L3Wo.jpeg">
 <img src="https://i.imgur.com/AiiGbJK.jpeg">

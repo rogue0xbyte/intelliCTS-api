@@ -27,6 +27,24 @@ def extract_account_and_ifsc(file_path):
 
     return {"Account Number": account_number, "IFSC Code": ifsc_code}
 
+def lang_ocr(filepath):
+    image = cv2.imread(filepath)
+    gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    _, thresholded_image = cv2.threshold(gray_image, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+
+    reader = easyocr.Reader(['hi'])
+
+    results = reader.readtext(thresholded_image)
+
+    final_text = ''
+
+    for detection in results:
+        text = detection[1]
+        final_text += text
+
+    return final_text
+
 # Example usage:
 file_path = "signature_ident_data/X"
 data = []

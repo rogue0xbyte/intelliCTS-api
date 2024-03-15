@@ -49,7 +49,7 @@ const Login = () => {
         // Handle successful login response here
         sessionStorage.setItem('logged_in', 'true');
         sessionStorage.setItem('session_key', seshKey);
-        navigate('/dashboard');
+        navigate('/upload');
         // Handle successful login response here
       })
       .catch(error => {

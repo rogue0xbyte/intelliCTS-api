@@ -6,7 +6,6 @@
 
 # production
 /back-end/build
-/front-end/build
 
 # misc
 /back-end/.DS_Store
@@ -14,12 +13,6 @@
 /back-end/.env.development.local
 /back-end/.env.test.local
 /back-end/.env.production.local
-
-/front-end/.DS_Store
-/front-end/.env.local
-/front-end/.env.development.local
-/front-end/.env.test.local
-/front-end/.env.production.local
 
 /back-end/npm-debug.log*
 /back-end/yarn-debug.log*

@@ -2,6 +2,8 @@
 
 IntelliCTS embodies a sophisticated Cheque Truncation System designed to streamline and optimize the clearing process through the integration of state-of-the-art AI/ML/ICR/OCR methodologies. Serving as a robust solution, it seamlessly articulates automatic data entry, meticulous technical verification, precise signature validation, and multilingual assistance, among other capabilities. Through the adept utilization of pioneering technologies, IntelliCTS endeavors to redefine conventional practices within the cheque processing landscape. The system helps to mitigate human intervention, expediting processing timelines and fortifying resilience against potential discrepancies. 
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YCPpuK4bJfQ/0.jpg)](https://www.youtube.com/watch?v=YCPpuK4bJfQ)
+
 The application facilitates bulk processing of cheques and lets you parse through Account Number, IFSC Code, Amount and handrwitten names in the cheque.
 
 <img src="https://i.imgur.com/n4Fk3NR.jpeg">

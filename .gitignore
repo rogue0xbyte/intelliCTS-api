@@ -21,3 +21,5 @@
 /react-code/npm-debug.log*
 /react-code/yarn-debug.log*
 /react-code/yarn-error.log*
+
+/intelliCTS-media/*
